@@ -1,4 +1,4 @@
-name: BIS CD Workflow
+name: BIS-build-and-deploy
 
 on:
   push:
