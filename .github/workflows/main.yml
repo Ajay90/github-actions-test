@@ -1,0 +1,32 @@
+name: BIS CD Workflow
+
+on:
+  push:
+    branches: master
+    
+jobs:
+  build-prod:
+    if: ${{ github.ref == 'refs/heads/master' }}
+    runs-on: [self-hosted, docker-deploy]
+    steps:
+      - uses: action/checkout@3
+        with:
+          ref: master
+      - name: Build BIS notifier java classes
+        run: |
+          mvn clean install
+          
+  deploy-prod:
+    needs: [build-prod]
+    runs-on: [self-hosted, docker-deploy]
+    strategy:
+      matrix:
+        host: [ 'daeosssdev05' ]
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: master
+      - name: Build docker image and run it
+        run: |
+          docker image build -t tca-bis-notifier:1 .
+          docker container run -p 8090:8080 tca-bis-notifier:1
