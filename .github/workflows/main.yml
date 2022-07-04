@@ -2,7 +2,7 @@ name: BIS-build-and-deploy
 
 on:
   push:
-    branches: master
+    branches: [ master ]
     
 jobs:
   build-prod:
