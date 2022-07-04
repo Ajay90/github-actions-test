@@ -13,9 +13,7 @@ jobs:
         with:
           ref: master
       - name: Build-BIS-notifier-java-classes
-        run: |
-          mvn clean
-          mvn package
+        run: mvn clean package
           
   deploy-prod:
     needs: [build-prod]
