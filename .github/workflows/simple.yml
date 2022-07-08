@@ -1,4 +1,4 @@
-# name: Run some Shell and Windows Commands
+name: Run some Shell and Windows Commands
 
 on: [push]
 
