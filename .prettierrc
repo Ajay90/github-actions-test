@@ -1,10 +1,18 @@
 {
-    "editor.fontSize": 18,
-    "window.zoomLevel": 4,
-    "workbench.statusBar.visible": false,
-    "gitlens.currentLine.enabled": false,
-    "editor.formatOnSave": true,
-    "terminal.integrated.fontSize": 18,
-    "terminal.integrated.fontWeight": "500",
-    "terminal.integrated.fontWeightBold": "600"
+    "arrowParens": "avoid",
+    "bracketSpacing": true,
+    "htmlWhitespaceSensitivity": "css",
+    "insertPragma": false,
+    "jsxBracketSameLine": false,
+    "jsxSingleQuote": false,
+    "printWidth": 100,
+    "proseWrap": "preserve",
+    "quoteProps": "as-needed",
+    "requirePragma": false,
+    "semi": true,
+    "singleQuote": false,
+    "tabWidth": 2,
+    "trailingComma": "none",
+    "useTabs": false,
+    "vueIndentScriptAndStyle": false
 }
